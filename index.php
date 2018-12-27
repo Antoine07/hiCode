@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hicode</title>
-    <?php wp_head() ; ?>
+    <?php wp_head(); ?>
 </head>
 <body>
     <h1>Hicode</h1>
     <h2>Page d'accueil</h2>
+
+<header>
+<?php 
+// fonction WP qui permet d'aller chercher le menu définit dans l'administration
+wp_nav_menu([
+    'theme_location' => 'main'
+]); ?>
+
+</header>
     <!-- Début de la Boucle. -->
- <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+ <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <!-- Affiche le Titre en tant que lien vers le Permalien de l'Article. -->
 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -30,7 +39,8 @@
 </div> <!-- Fin du premier bloc div -->
 
 <!-- Fin de La Boucle (mais notez le "else:" - voir la suite). -->
-<?php endwhile; else: ?>
+<?php endwhile;
+else : ?>
 
 <!-- Le premier "if" testait l'existence d'Articles à afficher. Cette -->
 <!-- partie "else" indique que faire si ce n'est pas le cas. -->
@@ -40,6 +50,6 @@
 <?php endif; ?>
 
 
-    <?php wp_footer() ; ?>
+    <?php wp_footer(); ?>
 </body>
 </html>
