@@ -7,7 +7,7 @@
     <title>Hicode</title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="<?php echo al_insert_className() ; ?>">
     <h1>Hicode</h1>
     <h2>Formation</h2>
 <header>
