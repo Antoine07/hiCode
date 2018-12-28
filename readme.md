@@ -82,10 +82,9 @@ Du code HTML ...
 <?php endif ; ?>
 
 
-<?php 
+<?php
 
-
-while( $condition) : 
+while( $condition) :
 
 
 // code ...
