@@ -9,9 +9,7 @@
 </head>
 <body>
     <h1>Hicode</h1>
-    <h2>Page <?php single_cat_title() ; ?>
-    <?php single_post_title() ; ?>
-</h2>
+    <h2>Formation</h2>
 <header>
 <?php 
 // fonction WP qui permet d'aller chercher le menu définit dans l'administration
